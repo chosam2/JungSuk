@@ -18,7 +18,7 @@ public class Exam03 {
 
 	private static int foo(int width, int height, int depth) {
 		int a = (width * depth) * 2;
-		int b = (width * height) * 2;
+		int b = (height * depth) * 2;
 		int c = width * height;
 		int sum = a + b + c;
 		int result = 0;
