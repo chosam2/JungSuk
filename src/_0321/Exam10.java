@@ -24,9 +24,9 @@ public class Exam10 {
 			System.out.println("email을 입력하세요 : ");
 			String email = sc.nextLine();
 			peoples[i] = new People(name, age, addr, sex, regNum, tel, email);
+			System.out.println(peoples[i].toString());
 		}
 		
-		System.out.println(peoples[0].toString());
 
 	}
 }
