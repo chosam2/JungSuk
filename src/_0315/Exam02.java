@@ -13,7 +13,6 @@ public class Exam02 {
 			int input = Integer.parseInt(sc.nextLine());
 			arr[i] = input;
 		}
-		System.out.println(Arrays.toString(arr));
 
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < i; j++) {
