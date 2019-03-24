@@ -7,26 +7,26 @@ package ch07;
 	될 수 도 있기 때문이다. 이러한 문제점이 발생하지 않도록 아래의 SutdaCard를 수정하시
 	오.
  */
-public class SutdaCard {
-	int num;
-	boolean isKwang;
+class $SutdaCard {
+	final int NUM;
+	final boolean IS_KWANG;
 
-	SutdaCard() {
+	$SutdaCard() {
 		this(1, true);
 	}
 
-	SutdaCard(int num, boolean isKwang) {
-		this.num = num;
-		this.isKwang = isKwang;
+	$SutdaCard(int num, boolean isKwang) {
+		this.NUM = num;
+		this.IS_KWANG = isKwang;
 	}
 
 	public String toString() {
-		return num + (isKwang ? "K" : "");
+		return NUM + (IS_KWANG ? "K" : "");
 	}
 }
 
 class Exercise7_14 {
 	public static void main(String args[]) {
-		SutdaCard card = new SutdaCard(1, true);
+		$SutdaCard card = new $SutdaCard(1, true);
 	}
 }

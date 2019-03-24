@@ -15,7 +15,7 @@ package ch07;
 	b. u = ac;
 	c. GroundUnit gu = (GroundUnit)u;
 	d. AirUnit au = ac;
-	e. t = (Tank)u;
+	e. t = (Tank)u;	// 조상인스턴스 -> 자손 타입으로 형변환 하는것은 불가능.
 	f. GroundUnit gu = t;
  */
 

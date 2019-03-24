@@ -12,9 +12,12 @@ class _SutdaDeck {
 	_SutdaCard[] cards = new _SutdaCard[CARD_NUM];
 
 	_SutdaDeck() {
-		/*
-		(1) 배열 SutdaCard를 적절히 초기화 하시오.
-		*/
+		for (int i = 0; i < cards.length; i++) {
+			int num = i % 10 + 1;
+			boolean isKwang = (i < 10) && (num == 1 || num == 3 || num == 8);
+			
+			cards[i] = new _SutdaCard(num, isKwang);
+		}
 	}
 }
 

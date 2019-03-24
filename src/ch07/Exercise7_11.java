@@ -10,21 +10,22 @@ package ch07;
 	반환타입 : 없음
 	매개변수 : 없음
  */
-class MyTv2 {
-	/*
-	*/
-}
-
-class Exercise7_11 {
-	public static void main(String args[]) {
-		MyTv2 t = new MyTv2();
-		t.setChannel(10);
-		System.out.println("CH:" + t.getChannel());
-		t.setChannel(20);
-		System.out.println("CH:" + t.getChannel());
-		t.gotoPrevChannel();
-		System.out.println("CH:" + t.getChannel());
-		t.gotoPrevChannel();
-		System.out.println("CH:" + t.getChannel());
-	}
-}
+//class MyTv2 {
+//	void gotoPrevChannel() {
+//		setChannel(getChannel() - 1);
+//	}
+//}
+//
+//class Exercise7_11 {
+//	public static void main(String args[]) {
+//		MyTv2 t = new MyTv2();
+//		t.setChannel(10);
+//		System.out.println("CH:" + t.getChannel());
+//		t.setChannel(20);
+//		System.out.println("CH:" + t.getChannel());
+//		t.gotoPrevChannel();
+//		System.out.println("CH:" + t.getChannel());
+//		t.gotoPrevChannel();
+//		System.out.println("CH:" + t.getChannel());
+//	}
+//}

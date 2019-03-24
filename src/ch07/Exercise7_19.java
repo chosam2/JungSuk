@@ -42,6 +42,14 @@ class Buyer {
 	int i = 0; // Product배열 cart에 사용될 index
 
 	void buy(Product p) {
+
+		if (p.price > money) {
+			System.out.println("잔돈이 부족하여 " + p + "을/를 살수 없습니다.");
+			return;
+		}
+		money = money - p.price;
+		add(p);
+
 		/*
 		(1) 아래의 로직에 맞게 코드를 작성하시오.
 		1.1 가진 돈과 물건의 가격을 비교해서 가진 돈이 적으면 메서드를 종료한다.
@@ -51,6 +59,13 @@ class Buyer {
 	}
 
 	void add(Product p) {
+
+		if (i >= cart.length) {
+			Product[] tmp = new Product[cart.length * 2];
+			System.arraycopy(cart, 0, tmp, 0, cart.length);
+			cart = tmp;
+		}
+		cart[i++] = p;
 		/*
 		(2) 아래의 로직에 맞게 코드를 작성하시오.
 		1.1 i의 값이 장바구니의 크기보다 같거나 크면
@@ -62,6 +77,21 @@ class Buyer {
 	} // add(Product p)
 
 	void summary() {
+
+		String itemList = "";
+		int sum = 0;
+
+		for (int i = 0; i < cart.length; i++) {
+			if (cart[i] == null) {
+				break;
+			}
+			itemList += cart[i] + ",";
+			sum += cart[i].price;
+		}
+
+		System.out.println("구입한 물건 : " + itemList);
+		System.out.println("사용한 금액 : " + sum);
+		System.out.println("남은 금액 : " + money);
 		/*
 		(3) 아래의 로직에 맞게 코드를 작성하시오.
 		1.1 장바구니에 담긴 물건들의 목록을 만들어 출력한다.

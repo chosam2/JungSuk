@@ -5,14 +5,34 @@ class SutdaDeck {
 	SutdaCard[] cards = new SutdaCard[CARD_NUM];
 
 	SutdaDeck() {
-		/*
-		문제 7-1의 답이므로 내용생략
-		*/
+		for (int i = 0; i < cards.length; i++) {
+			int num = i % 10 + 1;
+			boolean isKwang = (i < 10) && (num == 1 || num == 3 || num == 8);
+			cards[i] = new SutdaCard(num, isKwang);
+		}
 	}
-	/*
-	(1) 위에 정의된 세 개의 메서드를 작성하시오.
-	*/
-} // SutdaDeck
+
+	void shuffle() {
+		for (int i = 0; i < cards.length; i++) {
+			int j = (int) (Math.random() * cards.length);
+
+			SutdaCard tmp = cards[i];
+			cards[i] = cards[j];
+			cards[j] = tmp;
+		}
+	}
+
+	SutdaCard pick(int index) {
+		if (index < 0 || index >= CARD_NUM)
+			return null;
+		return cards[index];
+	}
+
+	SutdaCard pick() {
+		int index = (int) (Math.random() * cards.length);
+		return pick(index);
+	}
+}
 
 class SutdaCard {
 	int num;

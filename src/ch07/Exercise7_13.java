@@ -5,5 +5,9 @@ package ch07;
  *
  */
 public class Exercise7_13 {
-
+	public static void main(String[] args) {
+		Math.random();
+		
+		// Math 클래스는 상수와 static메서드로만 이루어져 있기떄문에 객체를 생성 할 필요가 없다.
+	}
 }
