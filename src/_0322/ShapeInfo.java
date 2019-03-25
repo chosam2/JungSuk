@@ -1,5 +1,6 @@
 package _0322;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ShapeInfo {
@@ -57,15 +58,15 @@ public class ShapeInfo {
 
 	// 도형정보조회(2)
 	void show(Shape s) {
-//		if (s instanceof Circle) {
-//			s = (Circle) s;
-//			System.out.println(s.toString());
-//		} else if (s instanceof Rectangle) {
-//			s = (Rectangle) s;
-//			System.out.println(s.toString());
-//		} else {
-//			System.out.println("없다");
-//		}
+		//		if (s instanceof Circle) {
+		//			s = (Circle) s;
+		//			System.out.println(s.toString());
+		//		} else if (s instanceof Rectangle) {
+		//			s = (Rectangle) s;
+		//			System.out.println(s.toString());
+		//		} else {
+		//			System.out.println("없다");
+		//		}
 		System.out.println(s.toString());
 	}
 
@@ -73,6 +74,7 @@ public class ShapeInfo {
 		System.out.print("원의 반지름 : ");
 		//		circle = new Circle("원", Integer.parseInt(sc.nextLine()));
 		s = new Circle("원", Integer.parseInt(sc.nextLine()));
+
 		//		System.out.println(circle.toString());
 	}
 
